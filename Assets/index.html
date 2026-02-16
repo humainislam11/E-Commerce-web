@@ -156,35 +156,102 @@
   </div>
 </section>
 
+
+
+<!-- top rating product -->
+
+<section class="mb-3 bg-slate-100">
+     <div>
+      <h1 class="text-3xl font-bold text-center pt-9 mb-7">Trending Now</h1>
+      <p class="text-center font-semibold text-gray-600">The best of the best! These products are loved by thousands for their quality and performance.<br> See why they’re our current top-rated essentials.</p>
+     </div>
+     <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-9 gap-8" id="trending-container"></div>
+</section>
+
 <!-- product section -->
 
 <section id="products-section" class="py-16 px-6 lg:px-24 bg-white">
   <h2 class="text-4xl font-bold text-center mb-12">Our Products</h2>
 
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 text-center gap-2 lg:px-32">
-      <h1 class="text-[13px] text-gray-700 font-semibold border rounded-xl">All</h1>
-      <h1 class="text-[13px] text-gray-700 font-semibold border rounded-xl">Jewelery</h1>
-      <h1 class="text-[13px] text-gray-700 font-semibold border rounded-xl">Electronics</h1>
-      <h1 class="text-[13px] text-gray-700 font-semibold border rounded-xl">Men's Clothing</h1>
-      <h1 class="text-[13px] text-gray-700 font-semibold border rounded-xl">Women's Clothing</h1>
-      
-  </div>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 text-center gap-2 lg:px-32 mb-14">
+    <button onclick="loadProducts()" class="btn border rounded-xl">All</button>
+    
+    <button onclick="loadCategoryProducts('jewelery')" class="btn border rounded-xl">Jewelery</button>
+    <button onclick="loadCategoryProducts('electronics')" class="btn border rounded-xl">Electronics</button>
+    
+    <button onclick="loadCategoryProducts(`men's clothing`)" class="btn border rounded-xl">Men's Clothing</button>
+    <button onclick="loadCategoryProducts(`women's clothing`)" class="btn border rounded-xl">Women's Clothing</button>
+</div>
 
 
   <div id="product-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-    
-    <!-- <div class="card bg-base-100 shadow-xl border border-gray-100">
-      <figure><img src="" alt="Product" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">Stylish Product</h2>
-        <p class="text-blue-500 font-bold text-xl">$49.99</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary btn-sm">Buy Now</button>
-        </div>
-      </div>
     </div>
-    </div> -->
+    
+   
 </section>
+
+
+<!-- footer section -->
+
+<footer class="footer sm:footer-horizontal bg-gray-900 text-gray-200 p-10 mt-20">
+  <aside>
+    <h2 class="text-2xl font-bold text-white mb-2 italic">SwiftCart<span class="text-indigo-500">.</span></h2>
+    <p>Providing the best shopping experience since 2024.<br/>Reliable and quality products at your doorstep.</p>
+    
+    <div class="flex gap-4 mt-4 text-xl">
+      <a class="hover:text-indigo-500 cursor-pointer"><i class="fab fa-facebook"></i></a>
+      <a class="hover:text-indigo-500 cursor-pointer"><i class="fab fa-instagram"></i></a>
+      <a class="hover:text-indigo-500 cursor-pointer"><i class="fab fa-twitter"></i></a>
+    </div>
+  </aside>
+
+  <nav>
+    <h6 class="footer-title text-indigo-400">Shop Categories</h6>
+    <a onclick="loadCategoryProducts(`men's clothing`)" class="link link-hover">Men's Clothing</a>
+    <a onclick="loadCategoryProducts(`women's clothing`)" class="link link-hover">Women's Clothing</a>
+    <a onclick="loadCategoryProducts('electronics')" class="link link-hover">Electronics</a>
+    <a onclick="loadCategoryProducts('jewelery')" class="link link-hover">Jewelery</a>
+  </nav>
+
+  <nav>
+    <h6 class="footer-title text-indigo-400">Customer Care</h6>
+    <a class="link link-hover">My Account</a>
+    <a class="link link-hover">Order Tracking</a>
+    <a class="link link-hover">Wishlist</a>
+    <a class="link link-hover">Return Policy</a>
+  </nav>
+
+  <nav>
+    <h6 class="footer-title text-indigo-400">Payment Methods</h6>
+    <div class="grid grid-cols-3 gap-2 text-3xl">
+      <i class="fab fa-cc-visa"></i>
+      <i class="fab fa-cc-mastercard"></i>
+      <i class="fab fa-cc-paypal"></i>
+    </div>
+    <p class="mt-2 text-xs opacity-60 italic text-white">Bkash Limited</p>
+  </nav>
+</footer>
+
+<footer class="footer footer-center p-4 bg-gray-950 text-gray-400 border-t border-gray-800">
+  <aside>
+    <p>Copyright © 2026 - All right reserved by SwiftCart Ltd.</p>
+  </aside>
+</footer>
+
+
+ 
+
+<!-- modal -->
+<!-- You can open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_3.showModal()">open modal</button> -->
+<dialog id="my_modal_3" class="modal">
+  <div class="modal-box">
+    <form method="dialog">
+      <button class="btn btn-ghost absolute right-2 top-2">Close</button>
+    </form>
+    <div class="p-10" id="details-container"></div>
+  </div>
+</dialog>
 
 
        <script src="/Assets/script/index.js"></script>
