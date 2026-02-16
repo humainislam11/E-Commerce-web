@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>E-Commerce-Web</title>
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- font integration -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- daisyui and tailwindcss -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- stylesheet -->
+
+    <link rel="stylesheet" href="style.css" />
+
+
+    
+  </head>
+  <body>
+    <section class="mx-auto">
+      <!-- This is Navbar -->
+
+      <div class="navbar bg-base-100 shadow-sm px-7">
+  <div class="navbar-start">
+    <a class="font-bold text-blue-500 text-2xl">SwiftCart</a>
+  </div>
+
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+     <li><a id="home-link" class="nav-link active">Home</a></li>
+  <li><a id="products-link" class="nav-link">Products</a></li>
+  <li><a class="nav-link">About</a></li>
+  <li><a class="nav-link">Contact</a></li>
+      
+    </ul>
+  </div>
+
+  <div class="navbar-end gap-4">
+    <i class="fas fa-shopping-cart text-xl"></i>
+
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+        </svg>
+      </div>
+      <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li><a id="home-link" class="nav-link active">Home</a></li>
+  <li><a id="products-link" class="nav-link">Products</a></li>
+  <li><a class="nav-link">About</a></li>
+  <li><a class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+    </section>
+
+    <!-- Banner section -->
+
+    <section  id="hero-banner">
+      <div
+        class="hero min-h-screen"
+        style="
+          background-image: url(/Assets/banner-image.png);
+        "
+      >
+        <div class="hero-overlay" style="background: linear-gradient(to right, rgb(28, 28, 49) 5%, rgba(4, 4, 8, 0.5) 60%,transparent 100%)"></div>
+        <div class="hero-content text-neutral-content">
+          <div class="max-w-md lg:text-left ">
+      <h1 class="mb-5 text-5xl font-bold lg:-ml-56">Best Collection For You</h1>
+      <p class="mb-5 lg:-ml-56 text-xl">
+        Discover the latest trends in fashion, electronics, and more. Shop with <br> confidence and style at SwiftCart.
+      </p>
+      <button class="btn btn-primary lg:-ml-56 px-8">Shop Now</button>
+    </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Why Choose Us section -->
+
+    <section class="py-16 bg-gray-200 px-6 lg:px-24">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold text-slate-900 mb-4">Why Choose Us</h2>
+    <p class="text-gray-500 max-w-2xl mx-auto">
+      We provide the best shopping experience with top-notch services.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+    <div class="p-8 bg-gray-100 rounded-xl  border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+      <div class="w-12 h-12 bg-blue-50 rounded-xl border border-white flex items-center justify-center -mt-14 mb-10">
+        <i class="fas fa-truck text-blue-600 text-xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-slate-800 mb-3">Fast Delivery</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">
+        Get your orders delivered to your doorstep quickly and efficiently.
+      </p>
+    </div>
+
+    <div class="p-8 bg-gray-100 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+      <div class="w-12 h-12 bg-blue-50 rounded-xl border border-white flex items-center justify-center -mt-14 mb-10">
+        <i class="fas fa-headset text-blue-600 text-xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-slate-800 mb-3">24/7 Support</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">
+        Our support team is available around the clock to assist you.
+      </p>
+    </div>
+
+    <div class="p-8 bg-gray-100 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+      <div class="w-12 h-12 bg-blue-50 rounded-xl border border-white flex items-center justify-center -mt-14 mb-10">
+        <i class="fas fa-shield-alt text-blue-600 text-xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-slate-800 mb-3">Secure Payment</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">
+        Experience safe and secure transactions with our encrypted payment systems.
+      </p>
+    </div>
+
+    <div class="p-8 bg-gray-100 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+      <div class="w-12 h-12 bg-blue-50 rounded-xl border border-white flex items-center justify-center -mt-14 mb-10">
+        <i class="fas fa-sync-alt text-blue-600 text-xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-slate-800 mb-3">Easy Returns</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">
+        Not satisfied? Return your products easily within 30 days.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- product section -->
+
+<section id="products-section" class="py-16 px-6 lg:px-24 bg-white">
+  <h2 class="text-4xl font-bold text-center mb-12">Our Products</h2>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 text-center gap-2 lg:px-32">
+      <h1 class="text-[13px] text-gray-700 font-semibold border rounded-xl">All</h1>
+      <h1 class="text-[13px] text-gray-700 font-semibold border rounded-xl">Jewelery</h1>
+      <h1 class="text-[13px] text-gray-700 font-semibold border rounded-xl">Electronics</h1>
+      <h1 class="text-[13px] text-gray-700 font-semibold border rounded-xl">Men's Clothing</h1>
+      <h1 class="text-[13px] text-gray-700 font-semibold border rounded-xl">Women's Clothing</h1>
+      
+  </div>
+
+
+  <div id="product-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    
+    <!-- <div class="card bg-base-100 shadow-xl border border-gray-100">
+      <figure><img src="" alt="Product" /></figure>
+      <div class="card-body">
+        <h2 class="card-title">Stylish Product</h2>
+        <p class="text-blue-500 font-bold text-xl">$49.99</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary btn-sm">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    </div> -->
+</section>
+
+
+       <script src="/Assets/script/index.js"></script>
+
+  </body>
+</html>
